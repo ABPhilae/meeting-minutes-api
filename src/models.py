@@ -49,11 +49,13 @@ class MeetingNotesRequest(BaseModel):
     )
 
     # This is a Pydantic v2 feature: example values for the docs
+    # IMPORTANT: Swagger UI sends JSON, so newlines must be escaped as \n
+    # in the example. Literal line breaks in the JSON body cause a 422 error.
     model_config = {
         "json_schema_extra": {
             "examples": [
                 {
-                    "raw_notes": "Meeting on Q4 Audit Planning - Jan 15, 2026. Present: Sarah, Jean-Pierre, Li Wei. Sarah opened by noting Q3 findings..."
+                    "raw_notes": "Meeting on Q4 Audit Planning - January 15, 2026\n\nPresent: Sarah Chen (Head of Audit), Jean-Pierre Dubois (Senior Auditor), Li Wei (Data Analytics Lead), Rahul Sharma (Risk Manager)\n\nSarah opened by reviewing the Q3 audit findings. She noted three critical issues were found in the APAC trade reconciliation system, specifically around timestamp mismatches between the Hong Kong and Singapore offices. She wants Q4 to focus on the same area with an expanded scope covering all five APAC offices.\n\nJean-Pierre suggested implementing automated data validation checks that could catch these discrepancies in real-time. He volunteered to draft a proposal for the automated checks by January 22nd. Sarah agreed this should be high priority.\n\nLi Wei demonstrated a prototype Power BI dashboard that could monitor reconciliation anomalies in real-time. The team was impressed with the demo. Li Wei will schedule a full walkthrough session for the broader audit team next Thursday at 2pm.\n\nRahul raised concerns about the regulatory deadline in March. The HKMA expects a comprehensive report on reconciliation controls by March 31. The team agreed this is the top priority and needs weekly status updates. Sarah will set up a recurring 30-minute weekly sync starting January 22.\n\nOther items discussed:\n- Budget approval for new audit tools is still pending with Finance\n- The annual audit methodology review will happen in February\n- Two new team members joining in February need onboarding plans\n\nRahul will prepare a risk assessment matrix for the APAC reconciliation issues by end of this week. Li Wei offered to provide data extracts to support Rahul's analysis.\n\nNext meeting: January 22, 2026 at 3pm HKT."
                 }
             ]
         }
