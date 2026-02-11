@@ -1,0 +1,18 @@
+Quick sync - product team standup jan 20
+
+me, tom, alice, and bob were there. david couldnt make it
+
+tom said the new feature is almost done, maybe by wednesday.
+alice is blocked on the API integration, needs bob to finish
+the authentication module ASAP. this is critical for the launch.
+
+i mentioned we need to update the docs before release. nobody
+volunteered so i guess ill do it myself by friday.
+
+bob said auth module will be done by tomorrow EOD. alice can
+start integration on wednesday.
+
+we need to do a demo for stakeholders next monday at 10am.
+tom will prepare the demo environment.
+
+next standup: same time tomorrow
