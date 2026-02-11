@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables (CONTAINS YOUR API KEY - NEVER COMMIT)
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
